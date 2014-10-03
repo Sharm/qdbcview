@@ -4,7 +4,7 @@
 #include "qdbcfile.h"
 //QT
 #include <QtCore/QAbstractTableModel>
-#include <QtGui/QSortFilterProxyModel>
+#include <QSortFilterProxyModel>
 
 class QDBCTableModel : public QAbstractTableModel
 {

@@ -3,10 +3,10 @@
 
 #include "qdbcinstance.h"
 //QT
-#include <QtGui/QMainWindow>
-#include <QtGui/QMessageBox>
-#include <QtGui/QFileDialog>
-#include <QtGui/QItemSelection>
+#include <QMainWindow>
+#include <QMessageBox>
+#include <QFileDialog>
+#include <QItemSelection>
 
 namespace Ui {
     class MainWindow;

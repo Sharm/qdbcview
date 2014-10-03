@@ -2,19 +2,19 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
-#include <QtGui/QAction>
-#include <QtGui/QApplication>
-#include <QtGui/QButtonGroup>
-#include <QtGui/QHeaderView>
-#include <QtGui/QMainWindow>
-#include <QtGui/QMenu>
-#include <QtGui/QMenuBar>
-#include <QtGui/QProgressDialog>
-#include <QtGui/QStatusBar>
-#include <QtGui/QTreeView>
-#include <QtGui/QTableView>
-#include <QtGui/QToolBar>
-#include <QtGui/QWidget>
+#include <QAction>
+#include <QApplication>
+#include <QButtonGroup>
+#include <QHeaderView>
+#include <QMainWindow>
+#include <QMenu>
+#include <QMenuBar>
+#include <QProgressDialog>
+#include <QStatusBar>
+#include <QTreeView>
+#include <QTableView>
+#include <QToolBar>
+#include <QWidget>
 //another UI
 #include "ui_dockwidget.h"
 

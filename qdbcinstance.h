@@ -5,7 +5,7 @@
 #include "qdbctablemodel.h"
 //Qt
 #include <QtCore/QObject>
-#include <QtGui/QItemSelection>
+#include <QItemSelection>
 
 class QDBCInstance : public QObject
 {
