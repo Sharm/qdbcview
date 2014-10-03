@@ -2,8 +2,8 @@
 #define QDBCFILE_H
 
 #include "constants.h"
-#include <math.h>
 //Qt
+#include <QtCore/qmath.h>
 #include <QtCore/QtEndian>
 #include <QtCore/QDebug>
 #include <QtCore/QVariant>

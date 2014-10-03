@@ -156,10 +156,10 @@ QString QDBCFile::getBitmaskTextRepresentation(quint32 field, quint32 row, Bitma
                 qint32 i = getInt(field,row);
                 if(i == 0)
                     return str.append("Empty.");
-                if(i == 0x7FFFFFFF or i < -0x7FFFFFFF)
+                if(i == 0x7FFFFFFF || i < -0x7FFFFFFF)
                     return str.append("All.");
                 while(i != 0 || index <= BITMASK_MAX_BIT) {
-                    qint32 value = pow(2,index);
+                    qint32 value = qPow(2,index);
                     if((i & value) == value) {
                         i = (i & ~value);
                         (view == BITMASK_VIEW_COMMA_SEPARATED_POSITIVE_BITS) ? str.append(QString::number(index)) : str.append(QString::number(index+1));
@@ -178,7 +178,7 @@ QString QDBCFile::getBitmaskTextRepresentation(quint32 field, quint32 row, Bitma
                 if(u == 0xffffffff)
                     return str.append("All.");
                 while(u != 0 || index <= BITMASK_MAX_BIT) {
-                    quint32 value = pow(2,index);
+                    quint32 value = qPow(2,index);
                     if((u & value) == value) {
                         u = (u & ~value);
                         (view == BITMASK_VIEW_COMMA_SEPARATED_POSITIVE_BITS) ? str.append(QString::number(index)) : str.append(QString::number(index+1));
@@ -273,7 +273,7 @@ bool QDBCFile::detectFieldType(quint32 field)
                     The insteresting thing about it is the fact that blizzards used same shit
                     themselves at least once. Current precision is about 60-70%.
                     */
-                        if(u > pow(2,19)) {
+                        if(u > qPow(2,19)) {
                             biguints++;
                             if(u%10 == 0)
                                 timeuints++;
@@ -306,9 +306,9 @@ bool QDBCFile::detectFieldType(quint32 field)
                     The insteresting thing about it is the fact that blizzards used same shit
                     themselves at least once. Current precision is about 60-70%.
                     */
-                        if(i == -1 or i == -2)
+                        if(i == -1 || i == -2)
                             maxuints++;
-                        if(absI > pow(2,19)) {
+                        if(absI > qPow(2,19)) {
                             bigints++;
                             if(absI%10 == 0)
                                 timeints++;
